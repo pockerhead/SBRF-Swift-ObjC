@@ -13,6 +13,8 @@
 		FE0510D7223B82800028CDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0510D6223B82800028CDDD /* Assets.xcassets */; };
 		FE0510DA223B82800028CDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0510D8223B82800028CDDD /* LaunchScreen.storyboard */; };
 		FE0510DD223B82800028CDDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0510DC223B82800028CDDD /* main.m */; };
+		FE0510E5223B82AC0028CDDD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0510E4223B82AC0028CDDD /* LinkedList.swift */; };
+		FE0510E7223B82E20028CDDD /* LinkedListObjCBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0510E6223B82E10028CDDD /* LinkedListObjCBridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		FE0510D9223B82800028CDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE0510DB223B82800028CDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE0510DC223B82800028CDDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE0510E3223B82AB0028CDDD /* SBRF-Swift+ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBRF-Swift+ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		FE0510E4223B82AC0028CDDD /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		FE0510E6223B82E10028CDDD /* LinkedListObjCBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListObjCBridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +67,14 @@
 				FE0510CE223B827C0028CDDD /* AppDelegate.m */,
 				FE0510D0223B827C0028CDDD /* ViewController.h */,
 				FE0510D1223B827C0028CDDD /* ViewController.m */,
+				FE0510E4223B82AC0028CDDD /* LinkedList.swift */,
+				FE0510E6223B82E10028CDDD /* LinkedListObjCBridge.swift */,
 				FE0510D3223B827C0028CDDD /* Main.storyboard */,
 				FE0510D6223B82800028CDDD /* Assets.xcassets */,
 				FE0510D8223B82800028CDDD /* LaunchScreen.storyboard */,
 				FE0510DB223B82800028CDDD /* Info.plist */,
 				FE0510DC223B82800028CDDD /* main.m */,
+				FE0510E3223B82AB0028CDDD /* SBRF-Swift+ObjC-Bridging-Header.h */,
 			);
 			path = "SBRF-Swift+ObjC";
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				TargetAttributes = {
 					FE0510C9223B827C0028CDDD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -143,6 +152,8 @@
 			files = (
 				FE0510D2223B827C0028CDDD /* ViewController.m in Sources */,
 				FE0510DD223B82800028CDDD /* main.m in Sources */,
+				FE0510E5223B82AC0028CDDD /* LinkedList.swift in Sources */,
+				FE0510E7223B82E20028CDDD /* LinkedListObjCBridge.swift in Sources */,
 				FE0510CF223B827C0028CDDD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SBRF-Swift+ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +305,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pockerhead.SBRF-Swift-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SBRF-Swift+ObjC/SBRF-Swift+ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SBRF-Swift+ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +325,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pockerhead.SBRF-Swift-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SBRF-Swift+ObjC/SBRF-Swift+ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
